@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "include/buried.h"
 
-TEST(BuriedBasicTest, Test1) { Buried_Create("D:/project/BuriedPoint"); }
+TEST(BuriedBasicTest, Test1) { Buried_Create("E:\\BuriedPoint"); }
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

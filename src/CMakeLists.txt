@@ -4,7 +4,7 @@ include_directories(. third_party third_party/spdlog/include third_party/boost t
 
 add_definitions(-D_WIN32_WINNT=0x0601)
 add_definitions(-DBOOST_JSON_NO_LIB)
-add_definitions(-DSPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
+add_definitions(-DSPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)   # 如果不定义这个宏，会导致formatting 功能异常
 add_subdirectory(third_party/spdlog)
 add_subdirectory(third_party/mbedtls/library)
 

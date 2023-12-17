@@ -3,7 +3,7 @@
 #include <unordered_set>
 
 #include "gtest/gtest.h"
-#include "src/common/common_service.h"
+#include "../src/common/common_service.h"
 
 TEST(CommonServiceTest, RandomStringTest) {
   std::unordered_set<std::string> random_set;
