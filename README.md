@@ -2,13 +2,13 @@
 
 ### Server截图
 
-![image-20231209200716025](E:\Typora_Pic\image-20231209200716025.png)
+![image-20231209200716025](./server.png)
 
 
 
 **client截图**
 
-![image-20231209200751522](E:\Typora_Pic\image-20231209200751522.png)
+![image-20231209200751522](./client.png)
 
 ### DB Browser 查看的json表格
 
