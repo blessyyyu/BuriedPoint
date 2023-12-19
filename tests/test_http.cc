@@ -9,14 +9,16 @@
 #include "src/third_party/boost/beast/http.hpp"
 #include "src/third_party/boost/beast/version.hpp"
 
-namespace beast = boost::beast;  // from <boost/beast.hpp>
-namespace http = beast::http;    // from <boost/beast/http.hpp>
-namespace net = boost::asio;     // from <boost/asio.hpp>
-using tcp = net::ip::tcp;        // from <boost/asio/ip/tcp.hpp>
+namespace beast = boost::beast; // from <boost/beast.hpp>
+namespace http = beast::http;   // from <boost/beast/http.hpp>
+namespace net = boost::asio;    // from <boost/asio.hpp>
+using tcp = net::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
 // Performs an HTTP POST and prints the response
-TEST(BuriedHttpTest, DISABLED_HttpPost) {
-  try {
+TEST(BuriedHttpTest, DISABLED_HttpPost)
+{
+  try
+  {
     auto const host = "localhost";
     auto const target = "/buried";
     int version = 11;
@@ -68,10 +70,18 @@ TEST(BuriedHttpTest, DISABLED_HttpPost) {
     // not_connected happens sometimes
     // so don't bother reporting it.
     //
-    if (ec && ec != beast::errc::not_connected) throw beast::system_error{ec};
-
+    if (ec && ec != beast::errc::not_connected)
+    {
+      std::cout << "beast::errc::not_connected." << std::endl;
+      throw beast::system_error{ec};
+    }
+    std::cout << "sleep here to check beast..." << std::endl;
+    std::this_thread::sleep_for(std::chrono::minutes(2));
     // If we get here then the connection is closed gracefully
-  } catch (std::exception const& e) {
+  }
+  catch (std::exception const &e)
+  {
     std::cerr << "Error: " << e.what() << std::endl;
+    getchar();
   }
 }

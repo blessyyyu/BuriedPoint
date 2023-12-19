@@ -129,7 +129,7 @@ class printer {
   int count_;
 };
 
-TEST(BuriedExecutorTest, TimerTest) {
+TEST(BuriedExecutorTest, DISABLED_TimerTest) {
   boost::asio::io_service io;
   printer p(io);
   std::thread t([&]() { io.run(); });

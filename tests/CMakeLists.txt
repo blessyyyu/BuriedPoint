@@ -8,6 +8,7 @@ set(TEST_SRC
     test_crypt.cc
     test_common_service.cc
     test_http.cc
+    test_myhttp.cc
     test_executor.cc
     test_db.cc
     test.cc)
