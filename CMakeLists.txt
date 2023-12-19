@@ -31,7 +31,6 @@ set(CMAKE_SHARED_LINKER_FLAGS_RELEASE
 
 set(INCDIRS . lib ${CMAKE_BINARY_DIR})
 include_directories(${INCDIRS})
-
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++20")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /std:c11")
 
